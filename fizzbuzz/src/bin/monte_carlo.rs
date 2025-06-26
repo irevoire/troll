@@ -2,7 +2,6 @@ use rand::Rng;
 use std::env;
 
 fn main() {
-    // Récupère la fréquence (par défaut 10)
     let freq: usize = env::args()
         .nth(1)
         .unwrap_or("100000000".to_string())
@@ -12,7 +11,6 @@ fn main() {
     let mut current_number = 1;
     let mut rng = rand::rng();
 
-    // Proportions issues de l'observation sur les 100 premiers nombres
     let fizz_range =  0.0..33.0;
     let buzz_range = 33.0..=(33.0+20.0);
 
